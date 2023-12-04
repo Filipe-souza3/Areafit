@@ -1,0 +1,75 @@
+.total{
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    // margin-top: 100px;
+    
+
+    .content{
+        width: 90%;
+        // margin: auto;
+        display: flex;
+        flex-direction: column;
+
+        h3{
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .radios{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around ;
+        }
+
+        .alert-height, .alert-age, .alert-active, .alert-weight{display: none;}
+        label{width: 100%;}
+        #result{
+            font-weight: 700;
+        }        
+
+        table{
+            margin-top: 20px;
+            width: 100%;
+        }
+        #div-result{
+            margin-bottom: 1rem;
+            font-size: larger;
+        }
+
+        .btn-calc{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 541px) and (max-width: 810px) {
+
+    .content{
+        width: 40% !important;
+    }
+
+}
+@media screen and (min-width: 811px) {
+
+    .total{
+        width: 100%;
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+        // margin-top: 100px;
+        
+    
+        .content{
+            width: 25%;
+            // margin: auto;
+            display: flex;
+            flex-direction: column;
+    
+            table{
+                margin-top: 20px;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+section {
+    height: auto;
+}
+
+.total {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    // margin-top: 5rem;
+
+    .content {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+
+        .day {
+            width: 100%;
+        }
+
+        .day:nth-child(2) {
+            margin-top: 1rem !important;
+        }
+
+        h2,
+        h3 {
+            text-align: center;
+        }
+
+        div {
+            .cards {
+                margin: auto;
+                width: 100%;
+
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 541px) {
+    .muscle-name {
+        font-size: 1.2rem;
+        margin-top: 2rem !important;
+    }
+
+    .muscle-name:nth-child(n+2) {
+        margin-top: 0 !important;
+    }
+
+    .day:nth-child(n+2) {
+        margin-top: 0 !important;
+    }
+}
+
+@media screen and (min-width: 541px) and (max-width: 810px) {
+    .content {
+        max-width: 90%;
+
+        .muscle-name {
+            font-size: 1.4rem;
+            margin-top: 2.5rem !important;
+        }
+
+        .day:nth-child(n+2) {
+            margin-top: 2.5rem !important;
+        }
+    }
+}
+
+@media screen and (min-width: 811px) {
+    .content {
+        max-width: 70%;
+
+        .muscle-name {
+            margin-top: 3rem !important;
+            font-size: 1.4rem;
+        }
+
+        .day:nth-child(n+2) {
+            margin-top: 4rem;
+        }
+    }
+}

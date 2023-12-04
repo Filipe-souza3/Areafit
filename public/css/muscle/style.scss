@@ -1,0 +1,259 @@
+// html,
+// body {
+//     padding: 0;
+//     margin: 0;
+//     width: 100%;
+//     height: 100%;
+//     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+//     background-color: #f3f3f3;
+//     display: flex;
+// }
+
+section {
+    // #f5ca24
+    // min-height: 100vh;
+    height: auto;
+    // width: 100%;
+    display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+
+    .content-out {
+        display: flex;
+        justify-content: center;
+
+        .content {
+            // margin-top: 5rem;
+            margin-bottom: 5rem;
+            width: 90%;
+            // height: auto;
+
+            .content-img {
+                text-align: justify;
+                margin-bottom: 2rem;
+                display: flex;
+                flex-direction: column;
+
+                .content-desc {
+                    height: auto;
+
+                    // margin-bottom: 2rem;
+                    h3 {
+                        text-align: left;
+                    }
+
+                    .btn {
+                        width: 100%;
+                    }
+
+                    .level,
+                    .benef {
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                img {
+                    border-radius: 0.3rem;
+                    box-shadow: 5px 5px 11px #a1a1a1;
+                    // margin:auto;
+                    margin-top: 2rem;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .group-tip {
+                height: auto;
+
+                .tip {
+                    margin-bottom: 1rem;
+                    text-align: justify;
+
+                    svg {
+                        float: left;
+                        box-shadow: none !important;
+                        margin: 0 0.5rem 0 0;
+                        width: 2rem;
+                        height: 1.5rem !important;
+                    }
+
+                    img {
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        margin-bottom: 2rem;
+                        // float: left;
+                        box-shadow: none !important;
+                        border: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+
+    // .an {
+    //     // margin-top: 5rem;
+    //     width: 100%;
+    //     height: 12rem;
+    //     background-color: #a1a1a1;
+    // }
+}
+
+footer {
+
+    bottom: 0px;
+}
+
+
+
+@media screen and (min-width: 541px) and (max-width: 810px) {
+    section {
+        .content-out {
+            .content {
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+
+                .content-img {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 0px !important;
+
+                    .content-desc {
+                        // margin-bottom: 2rem;
+                    }
+
+                    .benef-img {
+                        display: flex;
+                        flex-direction: column;
+
+                        img {
+                            margin-top: 1rem;
+                            width: 20rem !important;
+                            margin: auto;
+                            margin-top: 2rem;
+                            box-shadow: 5px 5px 11px #a1a1a1;
+                            // margin: 0 1rem 1rem 1rem;
+                            width: 20rem;
+                        }
+                    }
+
+                    // img{
+                    //     margin: auto;
+                    //     // margin-top: 1rem;
+                    //     box-shadow:  5px 5px 11px #a1a1a1;
+                    //     // margin: 0 1rem 1rem 1rem;
+                    //     width:20rem;
+
+                    // }
+                }
+
+                .group-tip {
+                    margin-top: 1.5rem;
+
+                    h3 {
+                        margin-bottom: 1rem;
+                    }
+
+                    .tip {
+                        margin-bottom: 1rem;
+                        text-align: justify;
+
+                        svg {
+                            float: left;
+                            box-shadow: none !important;
+                            // border-width: 1px;
+                            // border-style: solid;
+                            // box-shadow:  5px 5px 11px #a1a1a1;
+                            margin: 0 0.5rem 0 0;
+                            width: 2rem;
+                            height: 1.5rem !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        // .an {
+        //     // margin-top: 5rem;
+        //     width: 80%;
+        //     height: 10rem;
+        //     background-color: #a1a1a1;
+        // }
+    }
+}
+
+@media screen and (min-width: 811px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .content-out {
+            .content {
+                display: flex;
+                flex-direction: column;
+                width: 60%;
+                // width: 100%;
+
+                .content-img {
+                    width: 100%;
+                    // height: 24rem !important;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 2rem;
+
+                    .content-desc {
+                        width: 100%;
+                        height: 100%;
+                        // background-color: #a1a1a1;
+                        // paddi;ng:0 5rem 0 0 ;
+
+                        .btn {
+                            width: 50%;
+                        }
+
+                        .level {
+                            font-size: 0.9rem;
+                            margin-bottom: 1rem;
+                        }
+
+                        .benef {
+                            margin-bottom: 1rem;
+                        }
+                    }
+
+                    .benef-img {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        img {
+                            margin-top: 1rem;
+                            width: 23rem !important;
+                        }
+                    }
+
+                }
+
+                .tip {
+                    margin-bottom: 1rem;
+
+                    svg {
+                        float: left;
+                        box-shadow: none !important;
+                        margin: 0 0.5rem 0 0;
+                        width: 2rem;
+                        height: 1.5rem !important;
+                    }
+                }
+            }
+        }
+
+        // .an {
+        //     width: 70% !important;
+        //     // margin-top: 5rem;
+        //     width: 80%;
+        //     height: 12rem;
+        //     background-color: #a1a1a1;
+        // }
+    }
+}
