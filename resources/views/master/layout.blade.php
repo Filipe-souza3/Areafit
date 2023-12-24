@@ -22,7 +22,7 @@
     <meta property="og:url" content="https://www.areafit.com.br" />
     <meta property="og:title" content="Areafit — Seu treino de forma simples" />
     <meta property="og:description" content="Areafit tem como objetivo simplificar seu treino, ajudando na montagem do treino, informações de como executar o exercício, calculadoras (IMC, Calorias)." />
-    <meta property="og:image" content="{{ asset('/storage/others/imgLink.jpg') }}" />
+    <meta property="og:image" itemprop="image" content="{{ asset('/storage/others/imgLink.jpg') }}" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
