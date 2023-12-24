@@ -7,11 +7,36 @@
     <meta name="theme-color" content="#171717">
     <meta name="apple-mobile-web-app-status-bar-style" content="#171717">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {{-- <meta property="og:title" content="Seu treino de forma simples."> --}}
+    {{-- <meta property="og:url" content="https://www.areafit.com.br"> --}}
+    {{-- <meta property="og:image" itemprop="image" content="{{ asset('/storage/others/imgLink.jpg') }}"/> --}}
+
+    <!-- Primary Meta Tags -->
+    <title>Areafit — Seu treino de forma simples</title>
+    <meta name="title" content="Areafit — Seu treino de forma simples" />
+    <meta name="description" content="Areafit tem como objetivo simplificar seu treino, ajudando na montagem do treino, informações de como executar o exercício, calculadoras (IMC, Calorias)." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.areafit.com.br" />
+    <meta property="og:title" content="Areafit — Seu treino de forma simples" />
+    <meta property="og:description" content="Areafit tem como objetivo simplificar seu treino, ajudando na montagem do treino, informações de como executar o exercício, calculadoras (IMC, Calorias)." />
+    <meta property="og:image" content="{{ asset('/storage/others/imgLink.jpg') }}" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.areafit.com.br" />
+    <meta property="twitter:title" content="Areafit — Seu treino de forma simples" />
+    <meta property="twitter:description" content="Areafit tem como objetivo simplificar seu treino, ajudando na montagem do treino, informações de como executar o exercício, calculadoras (IMC, Calorias)." />
+    <meta property="twitter:image" content="{{ asset('/storage/others/imgLink.jpg') }}" />
+
+
+
+
     <link rel="icon" type="image/x-icon" href="/storage/favicon/favicon.ico">
     <title>Areafit</title>
-
-    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> --}}
-    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script> --}}
+    <meta name="google-site-verification" content="e23Drh0PFauSgIAzrHQO4kmqdgztD1o5suNfZCMrwH4" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">

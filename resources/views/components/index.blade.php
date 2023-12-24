@@ -17,7 +17,7 @@
           <option value="2">Pesos</option>
         </select>
       </div> --}}
-    <h3>Clique no musculo que deseja exercitar</h3>
+    <h3>Clique no músculo que deseja exercitar</h3>
 </div>
 
 <div class="body">
