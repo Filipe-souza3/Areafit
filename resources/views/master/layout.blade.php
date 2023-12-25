@@ -31,11 +31,8 @@
     <meta property="twitter:description" content="Areafit tem como objetivo simplificar seu treino, ajudando na montagem do treino, informações de como executar o exercício, calculadoras (IMC, Calorias)." />
     <meta property="twitter:image" content="{{ asset('/storage/others/imgLink.jpg') }}" />
 
-
-
-
+    
     <link rel="icon" type="image/x-icon" href="/storage/favicon/favicon.ico">
-    <title>Areafit</title>
     <meta name="google-site-verification" content="e23Drh0PFauSgIAzrHQO4kmqdgztD1o5suNfZCMrwH4" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
