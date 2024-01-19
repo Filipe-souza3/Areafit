@@ -23,19 +23,21 @@
 <div class="body">
     <div class="body-front">
         <div class="man">
-            <img src="{{ asset('storage/body/male/front/trap.png') }}" alt="" class="trapImg">
-            <img src="{{ asset('storage/body/male/front/ombro.png') }}" alt="" class="shoulderImg">
-            <img src="{{ asset('storage/body/male/front/peito.png') }}" alt="" class="chestImg">
-            <img src="{{ asset('storage/body/male/front/biceps.png') }}" alt="" class="bicepsImg">
-            <img src="{{ asset('storage/body/male/front/antebraco.png') }}" alt="" class="forearmImg">
-            <img src="{{ asset('storage/body/male/front/barriga.png') }}" alt="" class="abdomenImg">
-            <img src="{{ asset('storage/body/male/front/lateral.png') }}" alt="" class="obliqueImg">
-            <img src="{{ asset('storage/body/male/front/coxa.png') }}" alt="" class="thighImg">
-            <img src="{{ asset('storage/body/male/front/pant.png') }}" alt="" class="calvesImg">
+
+            <img src="{{ asset('storage/body/male/front/trap.png') }}" alt="" class="trapImg" fetchpriority="high">
+            <img src="{{ asset('storage/body/male/front/ombro.png') }}" alt="" class="shoulderImg" fetchpriority="high">
+            <img src="{{ asset('storage/body/male/front/peito.png') }}" alt="" class="chestImg" fetchpriority="high">
+            <img src="{{ asset('storage/body/male/front/biceps.png') }}" alt="" class="bicepsImg" fetchpriority="high">
+            <img src="{{ asset('storage/body/male/front/antebraco.png') }}" alt="" class="forearmImg" fetchpriority="high">
+            <img src="{{ asset('storage/body/male/front/barriga.png') }}" alt="" class="abdomenImg" fetchpriority="high">
+            <img src="{{ asset('storage/body/male/front/lateral.png') }}" alt="" class="obliqueImg" fetchpriority="high">
+            <img src="{{ asset('storage/body/male/front/coxa.png') }}" alt="" class="thighImg" fetchpriority="high">
+            <img src="{{ asset('storage/body/male/front/pant.png') }}" alt="" class="calvesImg" fetchpriority="high">
 
 
             <img src="{{ asset('storage/body/male/maleFront.png') }}" alt="" class="img-front"
-                usemap="#bodymapfront">
+                usemap="#bodymapfront" fetchpriority="high"
+                alt="Corpo humano de frente, dividido por músculos">
 
             <map name="bodymapfront" id="bodymapfront">
                 <area shape="poly" class="MtrapRight trap" coords=""
@@ -132,8 +134,9 @@
             <img src="{{ asset('storage/body/male/back/hams.png') }}" alt="" class="hamsImgBack">
             <img src="{{ asset('storage/body/male/back/calves.png') }}" alt="" class="calvesImgBack">
 
-            <img src="{{ asset('storage/body/male/maleBack.png') }}" alt="" class="img-back"
-                usemap="#bodymapback">
+            <img src="{{ asset('storage/body/male/maleBack.png') }}" class="img-back"
+                usemap="#bodymapback"
+                alt="Corpo humano de costas, dividido por músculos">
 
             <map name="bodymapback" id="bodymapback">
                 <area shape="poly" class="trapBack" coords=""

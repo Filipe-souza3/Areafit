@@ -2912,7 +2912,7 @@
                         "nome" => "Extensão lombar",
                         "nome_url"=>"Extensao-lombar",
                         "desc" => "Extensão lombar",
-                        "img" => "Floor-Hyperextension-1.gif",
+                        "img" => "Floor-Hyperextension-1.webp",
                         "musculo_trabalhado" => "Lombar, Coxas Posteriores, glúteos",
 
                         "beneficios" => "A extensão lombar, ou hiperextensão lombar, oferece benefícios como fortalecimento dos músculos das costas, estabilização da região lombar, melhora da postura e prevenção de lesões. Esse exercício promove o fortalecimento dos músculos eretores da espinha, estabiliza a coluna lombar, corrige o encurvamento excessivo, aumenta a flexibilidade, fortalece os músculos abdominais, melhora o desempenho em atividades que exigem movimentos de extensão lombar, estimula a circulação sanguínea, previne lesões nas costas, alivia dores lombares e melhora o equilíbrio corporal.",
@@ -2934,7 +2934,7 @@
                         "nome" => "Levantamento romeno com halteres",
                         "nome_url"=>"Levantamento-romeno-com-halteres",
                         "desc" => "Levantamento romeno com halteres",
-                        "img" => "Dumbbell-Romanian-Deadlift.gif",
+                        "img" => "Dumbbell-Romanian-Deadlift.webp",
                         "musculo_trabalhado" => "Coxas anteriores, coxas posteriores, glúteos",
 
                         "beneficios" => "O levantamento romeno com halteres é um exercício altamente benéfico para fortalecer e tonificar os músculos dos membros inferiores, além de melhorar a estabilidade do core e a postura. Durante esse exercício, você segura halteres com os braços estendidos e executa uma flexão do quadril, mantendo as pernas levemente flexionadas. ",
@@ -2955,7 +2955,7 @@
                         "nome" => "Levantamento terra romeno",
                         "nome_url"=>"Levantamento-terra-romeno",
                         "desc" => "Levantamento terra romeno",
-                        "img" => "../Gluteos/Barbell-Romanian-Deadlift.gif",
+                        "img" => "../Gluteos/Barbell-Romanian-Deadlift.webp",
                         "musculo_trabalhado" => "Coxas anteriores, coxas posteriores, glúteos",
 
                         "beneficios" => "O exercício de Levantamento Terra, também conhecido como Deadlift, é um exercício composto que trabalha vários grupos musculares, incluindo os músculos das costas, glúteos, isquiotibiais e quadríceps. Ele é considerado um dos melhores exercícios para o fortalecimento da musculatura posterior do corpo, além de ser muito eficaz para desenvolver força e resistência muscular.
@@ -2975,7 +2975,7 @@
                         "nome" => "Prancha",
                         "nome_url"=>"Prancha",
                         "desc" => "Prancha",
-                        "img" => "../../front/Abdominais/plank.gif",
+                        "img" => "../../front/Abdomen/plank.webp",
                         "musculo_trabalhado" => "Lombar, reto abdominal,oblíquos, glúteos",
 
                         "beneficios" => "A prancha é um exercício que ajuda a fortalecer os músculos do core, incluindo os músculos abdominais, da região lombar e glúteos. Além disso, a prancha também pode ajudar a melhorar a postura, a estabilidade do tronco e a resistência cardiovascular. Outros benefícios incluem a redução da dor nas costas, a melhoria da coordenação motora e o aumento da flexibilidade.",
@@ -2993,7 +2993,7 @@
                         "nome" => "Extensão de tronco no banco inclinado",
                         "nome_url"=>"Extensao-de-tronco-no-banco-inclinado",
                         "desc" => "Extensão de tronco no banco inclinado",
-                        "img" => "Weighted-Back-Extension.gif",
+                        "img" => "Weighted-Back-Extension.webp",
                         "musculo_trabalhado" => "Lombar, Coxas Posteriores, glúteos",
 
                         "beneficios" => "A extensão de tronco no banco inclinado é um exercício que oferece diversos benefícios para o corpo. Em primeiro lugar, ele fortalece a região lombar, os glúteos e os músculos das pernas, ajudando a melhorar a estabilidade e o equilíbrio. Além disso, esse exercício também trabalha os músculos do abdômen, contribuindo para o fortalecimento da região central do corpo.
@@ -3014,7 +3014,7 @@
                         "nome" => "Bom dia",
                         "nome_url"=>"Bom-dia",
                         "desc" => "Bom dia",
-                        "img" => "../Gluteos/Barbell-Good-Morning.gif",
+                        "img" => "../Gluteos/Barbell-Good-Morning.webp",
                         "musculo_trabalhado" => "Lombar, glúteos, coxas posteriores",
 
                         "beneficios" => "O exercício 'bom dia' com barra reta é altamente benéfico para fortalecer e desenvolver os músculos do posterior da coxa, glúteos e lombar. Ao realizar esse exercício, você colhe uma série de benefícios. Em primeiro lugar, o 'bom dia' com barra reta é eficaz para fortalecer e tonificar os músculos posteriores da coxa, proporcionando pernas mais fortes e definidas. Além disso, ele também trabalha os glúteos, contribuindo para um bumbum mais firme e empinado. Outro benefício é o fortalecimento da região lombar, o que ajuda na estabilidade e na prevenção de lesões nessa área. Além disso, o exercício também envolve os músculos do core, contribuindo para uma melhor estabilidade e equilíbrio corporal.",
@@ -3035,7 +3035,7 @@
                         "nome" => "Elevação pévilca",
                         "nome_url"=>"Elevacao-pevilca",
                         "desc" => "Elevação pévilca",
-                        "img" => "../Gluteos/Dumbbell-Glute-Bridge.gif",
+                        "img" => "../Gluteos/Dumbbell-Glute-Bridge.webp",
                         "musculo_trabalhado" => "Lombar, glúteos, coxas posteriores",
 
                         "beneficios" => "O exercício de elevação pévilca com halter é um movimento eficaz para fortalecer e tonificar os músculos glúteos, posteriores da coxa e região lombar. Ao realizar esse exercício, você desfruta de vários benefícios. Em primeiro lugar, a elevação pévilca com halter é excelente para desenvolver glúteos mais firmes e empinados, melhorando a estética e a forma do bumbum. Além disso, fortalecer os glúteos e os músculos posteriores da coxa contribui para melhorar o desempenho em atividades que envolvem o movimento de extensão do quadril, como corrida, agachamento e saltos. Outro benefício é o fortalecimento da região lombar, o que ajuda na estabilidade e na prevenção de lesões nessa área. A elevação pévilca com halter também ativa os músculos do core, contribuindo para uma melhor estabilidade e equilíbrio corporal.",

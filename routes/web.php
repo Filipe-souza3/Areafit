@@ -25,6 +25,7 @@ use App\Http\Controllers\IndexController;
 Route::get('/',[IndexController::class,'dataIndex'])->name("body");
 Route::post('/getCookie',[IndexController::class,'getCookie'])->name("getCookie");
 
+Route::get('/politicas',[IndexController::class,'policy'])->name("policy");
 Route::get('/imc',[IndexController::class,'imc'])->name("imc");
 Route::get('/calorias',[IndexController::class,'calories'])->name("calories");
 Route::get('/meuTreino',[IndexController::class,'exercises'])->name("exercises");

@@ -2,16 +2,18 @@
 //     height: 100%;
 // }
 
-html, body {
+// html, body {
     // background-color: aqua;
     // min-height: 100vh !important;
-    height: auto;
-}
+    // height: auto;
+// }
 
 $first-color: #171717;
 // $second-color:#faa200;
 $second-color: #ffc107;
+
 @media screen and (max-width: 541px) {
+
     .logo-menu {
         // height: 180%;
         width: 40%;
@@ -118,12 +120,13 @@ footer {
     width: 100%;
     // min-height: 60vh;
     // min-hseight: 30rem;
-    margin-top: 2vh;
+    margin-top: 8vh;
     background-color: $first-color;
     display: flex;
+    justify-content: center;
 
     .center-footer {
-        margin: auto;
+        // margin: auto;
         width: 80%;
         height: 80%;
 

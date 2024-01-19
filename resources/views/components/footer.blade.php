@@ -42,6 +42,7 @@
                         <dl>
                             {{-- <li><a href="#">Insta</a></li> --}}
                             <li><a href="#">Email</a></li>
+                            <li><a href="{{ route('policy') }}">Políticas</a></li>
                         </dl>
                     </dl>
                 </div>

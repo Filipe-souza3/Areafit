@@ -46,20 +46,24 @@
     <meta name="google-site-verification" content="e23Drh0PFauSgIAzrHQO4kmqdgztD1o5suNfZCMrwH4" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" rel="preload" as="style">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer>
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" defer></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"></script> --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="stylesheet" href="css/app.css">
+    {{-- <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="{{ asset('css/menu-footer/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/index/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/master/style.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald"> --}}
+
+    {{-- <link rel="preload" href="css/app.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> --}}
+    <link rel="preload" href="{{ asset('css/menu-footer/style.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ asset('css/master/style.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Oswald" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
     @yield('scriptsStyles')
 </head>
@@ -74,20 +78,21 @@
     <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottomCookie"
         aria-labelledby="offcanvasBottomLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Aceitar termos Cookies</h5>
+            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Aceitar termos</h5>
+            {{-- <div class="btns" style="display: flex;justify-content: flex-end;margin-top:2rem;justify-content: center;"> --}}
+            {{-- <div class="btns" style="display:flex;justify-content: center;"> --}}
+                {{-- <button style="margin-right: 5px" type="button" class="btn btn-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close">Fechar</button> --}}
+                <button type="button" class="btn btn-warning" data-bs-dismiss="offcanvas" aria-label="success"
+                    onclick="createCookie()">Aceitar</button>
+            {{-- </div> --}}
         </div>
         <div class="offcanvas-body small" style="display:flex; flex-direction:column">
             <div class="content-offcanvas">
-                Utilizamos cookies para melhorar sua experiência em nosso site e poder salvar e gerenciar seu treino
-                para acessar quando quiser
-                em seu dispositivo.
+                Utilizamos cookies para melhorar sua experiência, gerenciando seu treino de acordo com a nossa 
+                <a href="{{ route('policy') }}">Política de Privacidade</a>. Ao aceitar você concorda com os termos.
             </div>
-            <div class="btns" style="display: flex;justify-content: flex-end;margin-top:2rem">
-                <button style="margin-right: 5px" type="button" class="btn btn-light" data-bs-dismiss="offcanvas"
-                    aria-label="Close">Fechar</button>
-                <button type="button" class="btn btn-warning" data-bs-dismiss="offcanvas" aria-label="success"
-                    onclick="createCookie()">Aceitar</button>
-            </div>
+
         </div>
     </div>
 

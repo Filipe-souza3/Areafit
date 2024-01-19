@@ -12,7 +12,7 @@
                 @endif
                 <a
                     href="{{ route('muscle', ['exercicio' => $lista->correcaoNomeExercicio($item['nome_url']), 'nomeMuscle' => $nomeMuscle]) }}">
-                    <img src="{{ asset($pathImage . $item['img']) }}" class="gif-person" alt="">
+                    <img loading="lazy" src="{{ asset($pathImage . $item['img']) }}" class="gif-person" alt="">
                     <div class="name">
                         <div class="name-1">
                             {{ $item['nome'] }}

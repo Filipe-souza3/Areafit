@@ -1,7 +1,10 @@
+body{min-height:100vh !important;}// html, body{min-height: 100vh !important;}
+
 section {
     display: flex;
     align-items: center;
     margin-top: 6rem;
+    min-height: 50vh;
     .an {
         // margin-top: 5rem;
         // margin-bottom: 5rem;

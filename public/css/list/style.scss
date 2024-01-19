@@ -20,6 +20,7 @@ html, body{
 
 section{
     // min-height: 100vh;
+    display: block;
     height:auto;
     width: 100%;
 
@@ -31,6 +32,9 @@ section{
         margin-bottom: 2rem;
         font-weight: 500;
         width: 100%;
+    }
+    .muscle-name:nth-child(n+2){
+        margin-top: 2rem;
     }
 
     .cards{

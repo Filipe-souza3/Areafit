@@ -337,6 +337,10 @@ class IndexController extends Controller
             "ads" => $this->ads]);
     }
 
+    public function policy(){
+        return view('policy',['ads' => $this->ads]);
+    }
+
     // public function exercises1(){
     //     $list_exercises = [];
     //     $contagemTest = 0;
