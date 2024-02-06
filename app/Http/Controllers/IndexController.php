@@ -8,6 +8,7 @@ use App\MeuPacote\Lista;
 use App\MeuPacote\BasicTrainning;
 use Illuminate\Support\Facades\Cookie;
 
+
 class IndexController extends Controller
 {
     //
@@ -57,126 +58,99 @@ class IndexController extends Controller
         $listWeek = json_decode(request()->cookie('training'), true);
         // \Log::info(print_r("exercies listweek", true));
         // \Log::info(print_r($listWeek, true));
-        
+
         // array_key_exists($daysWeek[0], $listWeek);
 
         // $jj = json_encode($daysWeek);
         // Cookie::queue('days', $jj, 999999);
-        $var = json_decode(request()->cookie('training'), true);
+        // $var = json_decode(request()->cookie('training'), true);
         $value = Cookie::get("trainig");
         // \Log::info(print_r("peganod cookie ", true));
         // \Log::info(print_r($var['segunda'], true));
 
         if (!empty($listWeek)) {
             // dd($listWeek);
-            for ($z = 0; $z < count($daysWeek); $z++) {
-                if (array_key_exists($daysWeek[$z], $listWeek)) {
-                    $list = $listWeek[$daysWeek[$z]];
+            try {
+                for ($z = 0; $z < count($daysWeek); $z++) {
+                    if (array_key_exists($daysWeek[$z], $listWeek)) {
+                        $list = $listWeek[$daysWeek[$z]];
 
-                    for ($i = 0; $i < count($list); $i++) {
-                        array_push($exercise['nameMuscle'], $list[$i]["muscle"]);
-                        array_push($exercise['pathImage'], $this->pathImage . $this->lista->getSide($list[$i]["muscle"]) . "/" . $list[$i]["muscle"] ."/");
-                        // array_push($nomes, $list[$i]["muscle"]);
-                        // array_push($pathImage, $this->pathImage . $this->lista->getSide($list[$i]["muscle"]) . "/" . $list[$i]["muscle"] . "/");
+                        for ($i = 0; $i < count($list); $i++) {
+                            array_push($exercise['nameMuscle'], $list[$i]["muscle"]);
+                            array_push($exercise['pathImage'], $this->pathImage . $this->lista->getSide($list[$i]["muscle"]) . "/" . $list[$i]["muscle"] . "/");
+                            // array_push($nomes, $list[$i]["muscle"]);
+                            // array_push($pathImage, $this->pathImage . $this->lista->getSide($list[$i]["muscle"]) . "/" . $list[$i]["muscle"] . "/");
 
 
 
-                        foreach ($list[$i]["exercise"] as $value) {
-                            $dadosExercicio = $this->lista->getExercicio($list[$i]["muscle"], $value);
-                            array_push($listOneMuscle, $dadosExercicio);
-                            // array_push($list_exercises, $dadosExercicio);
+                            foreach ($list[$i]["exercise"] as $value) {
+                                $dadosExercicio = $this->lista->getExercicio($list[$i]["muscle"], $value);
+                                if ($dadosExercicio != null) {
+                                    array_push($listOneMuscle, $dadosExercicio);
+                                } else {
+                                    \Log::info(print_r("Exercicio nao existe", true));
+
+
+                                    //deletar o cookie se nao existir algum exercicio
+                                    // \Cookie::queue('training','',0);
+                                    // return view('exercises', ['arrayListaDadosMuscle' => $exercises_list, 
+                                    // 'ArrayPathImage' => $pathImage, 
+                                    // 'arrayNomes' => $nomes, 
+                                    // 'daysWeek' => $daysWeek,
+                                    // 'ads' => $this->ads]);
+
+                                }
+                                // array_push($list_exercises, $dadosExercicio);
+                            }
+                            // array_push($list_exercises, $listOneMuscle);
+                            // array_push($exercises_list[$daysWeek[$z]], $listOneMuscle);
+                            // array_push($exercise['all_exercises'], $listOneMuscle);
+                            $exercise['all_exercises'] = $listOneMuscle;
+                            $listOneMuscle = [];
+
+                            array_push($exercises_list[$daysWeek[$z]], $exercise);
+                            $exercise['all_exercises'] = [];
+                            $exercise['pathImage'] = [];
+                            $exercise['nameMuscle'] = [];
+
+
                         }
-                        // array_push($list_exercises, $listOneMuscle);
-                        // array_push($exercises_list[$daysWeek[$z]], $listOneMuscle);
-                        // array_push($exercise['all_exercises'], $listOneMuscle);
-                        $exercise['all_exercises'] = $listOneMuscle;
-                        $listOneMuscle = [];
-
-                        array_push($exercises_list[$daysWeek[$z]], $exercise);
-                        $exercise['all_exercises'] = [];
-                        $exercise['pathImage'] = [];
-                        $exercise['nameMuscle'] =[];
+                    } else {
+                        \Log::info(print_r("Erro ao pegar dias da semana", true));
                     }
-                } 
-                // else {
+
+                    // else {
                     // array_push($list_exercises, []);
-                // }
+                    // }
+                }
+                // \Log::info(print_r($pathImage, true));
+                // \Log::info(print_r($exercises_list, true));
+                // dd($exercises_list);
+            } catch (\Throwable $e) {
+                \Log::info(print_r("Erro ao tentar manipular cookie", true));
             }
-            // \Log::info(print_r($pathImage, true));
-            // \Log::info(print_r($exercises_list, true));
-            // dd($exercises_list);
 
         } else {
             \Log::info(print_r("list vazia", true));
         }
-        return view('exercises', ['arrayListaDadosMuscle' => $exercises_list, 
-            'ArrayPathImage' => $pathImage, 
-            'arrayNomes' => $nomes, 
+
+
+        return view('exercises', [
+            'arrayListaDadosMuscle' => $exercises_list,
+            'ArrayPathImage' => $pathImage,
+            'arrayNomes' => $nomes,
             'daysWeek' => $daysWeek,
-            'ads' => $this->ads]);
+            'ads' => $this->ads
+        ]);
         // return view('exercises', ['arrayListaDadosMuscle' => $list_exercises, 'ArrayPathImage' => $pathImage, 'arrayNomes' => $nomes, 'daysWeek' => $daysWeek]);
     }
-    // public function exercises1()
-    // {
-    //     $daysWeek = ['segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado', 'domingo'];
-    //     $list_exercises = [];
-    //     // $contagemTest = 0;
-    //     $pathImage = [];
-    //     $nomes = [];
-    //     $listOneMuscle = [];
-
-    //     $listWeek = session('myList');
-    //     \Log::info(print_r("exercies", true));
-    //     \Log::info(print_r($listWeek, true));
-    //     if (!empty($listWeek)) {
-    //         // $this->my_list = json_decode(Cookie::get("muscle-cookie"));
-    //         \Log::info(print_r("exercies", true));
-    //         \Log::info(print_r($listWeek[$daysWeek[0]], true));
-
-
-    //         for ($z = 0; $z < count($daysWeek); $z++) {
-    //             if (array_key_exists($daysWeek[$z], $listWeek)) {
-    //                 $list = $listWeek[$daysWeek[$z]];
-
-    //                 for ($i = 0; $i < count($list); $i++) {
-    //                     array_push($nomes, $list[$i]["muscle"]);
-    //                     array_push($pathImage, $this->pathImage . $this->lista->getSide($list[$i]["muscle"]) . "/" . $list[$i]["muscle"] . "/");
-
-    //                     foreach ($list[$i]["exercise"] as $value) {
-    //                         $dadosExercicio = $this->lista->getExercicio($list[$i]["muscle"], $value);
-    //                         array_push($listOneMuscle, $dadosExercicio);
-    //                         // array_push($list_exercises, $dadosExercicio);
-    //                     }
-    //                     array_push($list_exercises, $listOneMuscle);
-    //                     $listOneMuscle = [];
-    //                 }
-    //             } else {
-    //                 // array_push($list_exercises, []);
-    //             }
-    //         }
-    //         // \Log::info(print_r($pathImage, true));
-    //         \Log::info(print_r($list_exercises, true));
-
-    //     } else {
-    //         \Log::info(print_r("list vazia", true));
-    //     }
-    //     return view('exercises', [
-    //         'arrayListaDadosMuscle' => $list_exercises, 
-    //         'ArrayPathImage' => $pathImage, 
-    //         'arrayNomes' => $nomes, 
-    //         'daysWeek' => $daysWeek]);
-    // }
-
 
 
     public function getCookie(Request $request)
     {
-        \Log::info(print_r("foi ajaxx", true));
+        // \Log::info(print_r("foi ajaxx", true));
         // \Log::info(print_r($request->all(), true));
-        \Log::info(print_r($request->muscleCookie, true));
-
-
-
+        // \Log::info(print_r($request->muscleCookie, true));
 
         $this->my_list = $request->muscleCookie;
         // if(!empty($this->my_list)){
@@ -206,10 +180,11 @@ class IndexController extends Controller
         $this->pathImage = $this->pathImage . $this->side . "/" . $muscle . "/";
 
         return view('list', [
-            'listaDadosMuscle' => $listaDadosMuscle, 
-            'pathImage' => $this->pathImage, 
+            'listaDadosMuscle' => $listaDadosMuscle,
+            'pathImage' => $this->pathImage,
             'nomeMuscle' => $muscle,
-            'ads' => $this->ads]);
+            'ads' => $this->ads
+        ]);
     }
 
     public function dataMuscle($nomeMuscle, $exercicio)
@@ -219,11 +194,12 @@ class IndexController extends Controller
         $this->pathImage = $this->pathImage . $this->side . "/" . $nomeMuscle . "/";
 
         return view('muscle', [
-            'exercicio' => $exercicio, 
-            'nomeMuscle' => $nomeMuscle, 
-            'dadosExercicio' => $dadosExercicio, 
+            'exercicio' => $exercicio,
+            'nomeMuscle' => $nomeMuscle,
+            'dadosExercicio' => $dadosExercicio,
             'pathImage' => $this->pathImage,
-            'ads' => $this->ads]);
+            'ads' => $this->ads
+        ]);
     }
 
 
@@ -280,19 +256,20 @@ class IndexController extends Controller
 
     public function imc()
     {
-        return view('imc',['ads' => $this->ads]);
+        return view('imc', ['ads' => $this->ads]);
     }
     public function calories()
     {
-        return view('calories',['ads' => $this->ads]);
+        return view('calories', ['ads' => $this->ads]);
     }
 
-    public function basicTrainning($gender){
+    public function basicTrainning($gender)
+    {
 
-        $basicExercise =[
-            'Segunda'=> [],
-            'Quarta'=> [],
-            'Sexta'=> [],
+        $basicExercise = [
+            'Segunda' => [],
+            'Quarta' => [],
+            'Sexta' => [],
         ];
 
         $exercise = [
@@ -304,41 +281,43 @@ class IndexController extends Controller
         $basicExerciseIndex = array_keys($basicExercise);
         $exercises = null;
 
-        if($gender == "Masculino"){
+        if ($gender == "Masculino") {
             $exercises = $this->basic->getMale();
-        }else if($gender == "Feminino"){
+        } else if ($gender == "Feminino") {
             $exercises = $this->basic->getFemale();
         }
 
 
-        for($i = 0 ; $i < sizeof($basicExerciseIndex) ; $i++) {
+        for ($i = 0; $i < sizeof($basicExerciseIndex); $i++) {
             $exercisesIndex = array_keys($exercises[$basicExerciseIndex[$i]]);
 
-            for($z = 0 ; $z < sizeof($exercisesIndex) ; $z++) {
+            for ($z = 0; $z < sizeof($exercisesIndex); $z++) {
 
                 array_push($exercise['nameMuscle'], $exercisesIndex[$z]);
-                array_push($exercise['pathImage'], $this->pathImage.$this->lista->getSide($exercisesIndex[$z])."/".$exercisesIndex[$z]."/");
+                array_push($exercise['pathImage'], $this->pathImage . $this->lista->getSide($exercisesIndex[$z]) . "/" . $exercisesIndex[$z] . "/");
 
-                for($y = 0 ; $y < sizeof($exercises[$basicExerciseIndex[$i]][$exercisesIndex[$z]]) ; $y++) {
+                for ($y = 0; $y < sizeof($exercises[$basicExerciseIndex[$i]][$exercisesIndex[$z]]); $y++) {
                     array_push($exercise['all_exercises'], $this->lista->getExercicio($exercisesIndex[$z], $exercises[$basicExerciseIndex[$i]][$exercisesIndex[$z]][$y]));
                 }
                 array_push($basicExercise[$basicExerciseIndex[$i]], $exercise);
 
                 $exercise['all_exercises'] = [];
                 $exercise['pathImage'] = [];
-                $exercise['nameMuscle'] =[];
+                $exercise['nameMuscle'] = [];
             }
         }
 
         return view("exercises-basic", [
-            "basicExercises"=> $basicExercise, 
-            "daysWeek" => $basicExerciseIndex, 
+            "basicExercises" => $basicExercise,
+            "daysWeek" => $basicExerciseIndex,
             "gender" => $gender,
-            "ads" => $this->ads]);
+            "ads" => $this->ads
+        ]);
     }
 
-    public function policy(){
-        return view('policy',['ads' => $this->ads]);
+    public function policy()
+    {
+        return view('policy', ['ads' => $this->ads]);
     }
 
     // public function exercises1(){

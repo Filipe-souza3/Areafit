@@ -8,26 +8,39 @@ var jsonWeek = {
     domingo: []
 };
 
-function openWeek(modalWeek){
+function openWeek(modalWeek) {
     let muscleCookie = getCookie('training');
-    if(muscleCookie == null){
+    if (muscleCookie == null) {
         showAcceptCookie();
-    }else {
+    } else {
         openModal(modalWeek);
     }
 }
 
-function openModal(nameModal){
-    if(nameModal){
-        const myModalAlternative = new bootstrap.Modal('#'+nameModal);
+function openModal(nameModal) {
+    if (nameModal) {
+        const myModalAlternative = new bootstrap.Modal('#' + nameModal);
         myModalAlternative.show();
     }
 }
 
-function openModalImportExport(nameModal){
-    if(nameModal){
-        const myModalAlternative = new bootstrap.Modal('#'+nameModal);
+function openModalImportExport(nameModal) {
+    if (nameModal) {
+        const myModalAlternative = new bootstrap.Modal('#' + nameModal);
         myModalAlternative.show();
+        this.exportar();
+    }
+}
+
+function closeModalImportExport(nameModal, alertName) {
+    if (nameModal) {
+        if(alert){
+            let alert = document.querySelector("."+alertName);
+            alert.style.display = "none";
+        }
+        let modalElement = document.getElementById(nameModal);
+        let myModalAlternative = bootstrap.Modal.getInstance(modalElement);
+        myModalAlternative.hide();
     }
 }
 
@@ -66,7 +79,7 @@ function getDays(muscle = null, exercise = null, url = null, key) {
     console.log(ter.getAttribute('value'));
 }
 
-function createListExercise(muscle = null, exercise = null, url = null, dayWeek) { 
+function createListExercise(muscle = null, exercise = null, url = null, dayWeek) {
     let exist = false;
     let cookie = {
         "muscle": muscle,
@@ -104,7 +117,7 @@ function createListExercise(muscle = null, exercise = null, url = null, dayWeek)
             document.cookie = "training=" + JSON.stringify(returnCookie) + ";path=/";
         } catch (error) {
             document.cookie = "training=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-            createListExercise(muscle, exercise,null, dayWeek);
+            createListExercise(muscle, exercise, null, dayWeek);
 
         }
     } else {
@@ -118,7 +131,7 @@ function createListExercise(muscle = null, exercise = null, url = null, dayWeek)
 function getCookie(params = null) {
     let content = null;
     let cookie = document.cookie;
-    console.log(cookie);
+    // console.log(cookie);
     if (cookie) {
         if (document.cookie.indexOf(params) != -1) {
             content = JSON.parse(
@@ -159,10 +172,10 @@ function deleteCookie(nomeMuscle = null, exerciseUrl = null, route = null, daysW
 
                         if (muscle['exercise'].length == 1) {
                             muscleCookie[daysWeek].splice(indexMuscle, 1);
-                            this.hiddenCardMuscle(exerciseUrl+"_"+daysWeek, nomeMuscle+"_"+daysWeek);
+                            this.hiddenCardMuscle(exerciseUrl + "_" + daysWeek, nomeMuscle + "_" + daysWeek);
                         } else {
                             muscleCookie[daysWeek][indexMuscle]['exercise'].splice(indexExercise, 1);
-                            this.hiddenCardMuscle(exerciseUrl+"_"+daysWeek, null);
+                            this.hiddenCardMuscle(exerciseUrl + "_" + daysWeek, null);
                         }
 
                         console.log("delete");
@@ -179,27 +192,119 @@ function deleteCookie(nomeMuscle = null, exerciseUrl = null, route = null, daysW
     }
 }
 
-function showAcceptCookie(){
+function showAcceptCookie() {
     let muscleCookie = getCookie('training');
-    if(muscleCookie == null){
+    if (muscleCookie == null) {
         const selectOffcanvas = document.querySelector('#offcanvasBottomCookie');
         canvas = new bootstrap.Offcanvas(selectOffcanvas);
         canvas.show();
     }
 }
 
-function createCookie(){
-    if(getCookie('training') == null){
-        let expire = new Date(2147483647 * 1000).toUTCString();
-        document.cookie = "training=" + JSON.stringify(jsonWeek) + ";expires="+expire+";path=/";
+function generateDate() {
+    return new Date(2147483647 * 1000).toUTCString();
+}
+
+function createCookie(textImport) {
+    let expire = generateDate();
+    if (textImport) {
+        document.cookie = "training=" + textImport + ";expires=" + expire + ";path=/";
+    } else {
+        if (getCookie('training') == null) {
+            document.cookie = "training=" + JSON.stringify(jsonWeek) + ";expires=" + expire + ";path=/";
+        }
     }
 }
 
-function cleanCookie(){
-    if(getCookie('training') != null){
+function cleanCookie() {
+    if (getCookie('training') != null) {
         document.cookie = "training=" + JSON.stringify(jsonWeek) + ";path=/";
         window.location.reload(true);
     }
 }
 
-showAcceptCookie();
+function exportar() {
+    let textArea = document.querySelector("#cookieExport");
+    let cookie = this.getCookie('training');
+    if (cookie != null) {
+        textArea.value = JSON.stringify(cookie);
+    }
+}
+
+function copiarExpotacao() {
+    let alert = document.querySelector(".alert-export");
+    let alertSucess = document.querySelector(".alert-success-export");
+    let textArea = document.querySelector("#cookieExport");
+    if (textArea.value) {
+        navigator.clipboard.writeText(textArea.value)
+            .then(() => {
+                console.log("Texto copiado.");
+                alertSucess.style.display = "block";
+            })
+            .catch(() => {
+                console.log("Problema ao copiar.");
+                alert.style.display = "block";
+            });
+            // closeModalImportExport('modalImportExport');
+    }else{
+        closeModalImportExport('modalImportExport','alert-export');
+        showAcceptCookie();
+        console.log('Nada para copiar.');
+    }
+}
+
+function importar() {
+    let textArea = document.querySelector("#textareaImport");
+
+    if (getCookie('training') == null) {
+        textArea.value ="";
+        closeModalImportExport('modalImportExport',"alert-import");
+        showAcceptCookie();
+    } else {
+        if (regex(textArea.value)) {
+    
+            let expire = generateDate();
+            document.cookie = "training=" + JSON.stringify(textArea.value) + ";expires=" + expire + ";path=/";  
+        }
+    }
+}
+
+function regex(text) {
+    let alert = document.querySelector(".alert-import");
+
+    let reg = new RegExp(/[.=><;]/, 'g');
+    let returnRegex = reg.test(text);
+    if (!returnRegex) {
+        // console.log('ok com o texto.');
+        if (
+            text.includes(':[{"muscle":') &&
+            text.includes('}]') &&
+            text.includes(':') &&
+            text.includes(',')
+        ) {
+
+                createCookie(text);
+                location.reload();
+
+            console.log('texto ok.');
+        } else {
+            console.log('problema com o texto.');
+            alert.style.display = "block";
+        }
+    } else {
+        console.log('problema com o texto.');
+        alert.style.display = "block";
+        // return false;
+    }
+
+}
+
+function limparImportar() {
+    let textArea = document.querySelector("#textareaImport");
+    textArea.value ="";
+ }
+// showAcceptCookie();
+
+
+
+// {"segunda":[{"muscle":"Trapezio","exercise":["Halteres-paralelos"]},{"muscle":"Obliquos","exercise":["Abdominal-bicicleta","Flexao-lateral-com-halter"]},{"muscle":"Trapezio-medio","exercise":["Remada-sentada-na-maquina-com-barra"]},{"muscle":"Coxas-posterior","exercise":["Bom-dia"]},{"muscle":"Panturrilhas","exercise":["Elevacao-de-panturrilhas"]}],"terca":[{"muscle":"Abdomen","exercise":["Abdominal-reto"]},{"muscle":"Obliquos","exercise":["Abdominal-boxeador"]}],"quarta":[{"muscle":"Coxas-anterior","exercise":["Agachamento-bulgaro"]},{"muscle":"Trapezio-medio","exercise":["Remada-curvada-com-barra","Remada-sentada-na-maquina"]},{"muscle":"Coxas-posterior","exercise":["Mesa-flexora"]},{"muscle":"Panturrilhas","exercise":["Elevacao-de-panturrilhas-sentado"]}],"quinta":[{"muscle":"Trapezio-medio","exercise":["Remada-sentada-na-maquina"]}],"sexta":[{"muscle":"Abdomen","exercise":["Prancha"]},{"muscle":"Trapezio-medio","exercise":["Remada-sentado-na-maquina"]}],"sabado":[{"muscle":"Coxas-anterior","exercise":["Levantamento-terra"]}],"domingo":[]}

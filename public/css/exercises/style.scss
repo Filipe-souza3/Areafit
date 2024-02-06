@@ -1,7 +1,15 @@
 section{
-    align-items: center;
+    align-items: center !important;
     min-height: 80vh;
 }
+
+.total{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+}
+
 .content {
     width: 100%;
     min-height: 58vh;
@@ -41,10 +49,23 @@ section{
     }
  }
 
+ .div-copiar{
+    width: 100%;
+    display: flex;
+    justify-content: end ;
+
+ }
+
+ .alert{
+    display: none;
+ }
+
+
 
 
 //  @media screen and (min-width: 600px) and (max-width: 1120px) {
     @media screen and (min-width: 541px) and (max-width: 810px) {
+ 
     .acc-days{
         width:80%;
     }

@@ -148,7 +148,7 @@
                     ),
                     Array(
                         "nome" => "Elevação lateral com halteres",
-                        "nome_url"=>"Elevação-lateral-com-halteres",
+                        "nome_url"=>"Elevacao-lateral-com-halteres",
                         "desc" => "Elevação dos ombros lateral com halteres",
                         "img" => "Dumbbell-Lateral-Raise.webp",
                         "musculo_trabalhado" => "Deltoide laterais, deltoide anterior, trapézio",
@@ -162,9 +162,9 @@
                         )
                     ),
                     Array(
-                        "nome" => "Elevação lateral no Cabo",
-                        "nome_url"=>"Elevação-lateral-no-Cabo",
-                        "desc" => "Elevação lateral no Cabo inclinado",
+                        "nome" => "Elevação lateral no cabo",
+                        "nome_url"=>"Elevacao-lateral-no-cabo",
+                        "desc" => "Elevação lateral no cabo inclinado",
                         "img" => "Cable-Lateral-Raise.webp",
                         "musculo_trabalhado" => "Deltoide laterais, deltoide anterior, trapézio",
 
@@ -182,7 +182,7 @@
                     ),
                     Array(
                         "nome" => "Elevação lateral sentado inclinado",
-                        "nome_url"=>"Elevação-lateral-sentado-inclinado",
+                        "nome_url"=>"Elevacao-lateral-sentado-inclinado",
                         "desc" => "Elevação lateral sentado com peito apoiado inclinado",
                         "img" => "Dumbbell-Chest-Supported-Lateral-Raises.webp",
                         "musculo_trabalhado" => "Deltoide posterior, deltoide lateral, trapézio",
@@ -235,7 +235,7 @@
                     ),
                     Array(
                         "nome" => "Elevação Frontal com Anilha",
-                        "nome_url"=>"Elevação-frontal-com-anilha",
+                        "nome_url"=>"Elevacao-frontal-com-anilha",
                         "desc" => "Elevação Frontal com Anilha",
                         "img" => "Weight-Plate-Front-Raise-1.webp",
                         "musculo_trabalhado" => "Deltoide anterior, deltoide lateral",
@@ -254,7 +254,7 @@
                     ),
                     Array(
                         "nome" => "Remada inclinada de 45 Graus",
-                        "nome_url"=>"Remada-inclinada-45-Graus",
+                        "nome_url"=>"Remada-inclinada-45-graus",
                         "desc" => "Remada inclinada de 45 Graus com halteres",
                         "img" => "45-Degree-Incline-Row.webp",
                         "musculo_trabalhado" => "Deltoide posterior, dorsal",
@@ -306,7 +306,7 @@
                     ),
                     Array(
                         "nome" => "Remada com halter unilateral",
-                        "nome_url"=>"remada-com-halter-unilateral",
+                        "nome_url"=>"Remada-com-halter-unilateral",
                         "desc" => "Remada com halter unilateral no banco",
                         "img" => "Dumbbell-Row.webp",
                         "musculo_trabalhado" => "Deltoide posterior, deltoide lateral, trapézio",
@@ -324,7 +324,7 @@
                     ),
                     Array(
                         "nome" => "Desenvolvimento com halteres",
-                        "nome_url"=>"desenv-halteres",
+                        "nome_url"=>"Desenv-halteres",
                         "desc" => "Desenvolvimento com halteres sentado",
                         "img" => "desenv-ombros.webp",
                         "musculo_trabalhado" => "Deltoide posterior, deltoide lateral, deltoide anterior",
@@ -342,7 +342,7 @@
                 "Peitoral" => Array(
                     Array(
                         "nome" => "Supino reto",
-                        "nome_url"=>"supino-reto",
+                        "nome_url"=>"Supino-reto",
                         "desc" => "Supino reto",
                         "img" => "Barbell-Bench-Press.webp",
                         "musculo_trabalhado" => "Peitoral, tríceps, ombros",
@@ -360,8 +360,8 @@
                     ),
                     Array(
                         "nome" => "Peck-deck/Voador",
-                        "nome_url"=>"Peck-deck-Voador",
-                        "desc" => "Peck-deck ou Voador",
+                        "nome_url"=>"Peck-deck-voador",
+                        "desc" => "Peck-deck ou voador",
                         "img" => "peckdeck.webp",
                         "musculo_trabalhado" => "Peitoral, deltoroides",
 
@@ -379,8 +379,8 @@
                     ),
                     Array(
                         "nome" => "Cross Over",
-                        "nome_url"=>"Crosso-Over",
-                        "desc" => "Cross Over na polia",
+                        "nome_url"=>"Cross-over",
+                        "desc" => "Cross over na polia",
                         "img" => "Cable-Crossover.webp",
                         "musculo_trabalhado" => "Peitoral, deltoroides",
 
@@ -398,7 +398,7 @@
                     ),
                     Array(
                         "nome" => "Cross Over na polia baixa",
-                        "nome_url"=>"Cross-Over-na-polia-baixa",
+                        "nome_url"=>"Cross-over-na-polia-baixa",
                         "desc" => "Cross Over na polia baixa",
                         "img" => "Low-Cable-Crossover.webp",
                         "musculo_trabalhado" => "Peitoral, deltoroides",
@@ -417,7 +417,7 @@
                     ),
                     Array(
                         "nome" => "Barra paralela",
-                        "nome_url"=>"barra-paralela",
+                        "nome_url"=>"Barra-paralela",
                         "desc" => "Barra paralela",
                         "img" => "Chest-Dips.webp",
                         "musculo_trabalhado" => "Peitoral, deltoroides, triceps",
@@ -435,7 +435,7 @@
                     ),
                     Array(
                         "nome" => "Supino fechado com halteres",
-                        "nome_url"=>"supino-fechado-com-halteres",
+                        "nome_url"=>"Supino-fechado-com-halteres",
                         "desc" => "Supino fechado com halteres",
                         "img" => "Close-Grip-Dumbbell-Press.webp",
                         "musculo_trabalhado" => "Peitoral, deltoide anterior, triceps",
@@ -452,7 +452,7 @@
                     ),
                     Array(
                         "nome" => "Supino fechado inclinado com halter",
-                        "nome_url"=>"supino-fechado-com-um-halter",
+                        "nome_url"=>"Supino-fechado-inclinado-com-um-halter",
                         "desc" => "Supino fechado com um halter",
                         "img" => "Close-grip-Incline-Dumbbell-Press.webp",
                         "musculo_trabalhado" => "Peitoral, deltoide anterior, triceps",
@@ -469,7 +469,7 @@
                     ),
                     Array(
                         "nome" => "Supino vertical na máquina",
-                        "nome_url"=>"supino-vertical-na-maquina",
+                        "nome_url"=>"Supino-vertical-na-maquina",
                         "desc" => "Supino vertical na máquina",
                         "img" => "Lever-Chest-Press.webp",
                         "musculo_trabalhado" => "Peitoral, deltoide anterior, triceps",
@@ -486,7 +486,7 @@
                     ),
                     Array(
                         "nome" => "Crucifixo declinado com halteres",
-                        "nome_url"=>"crucifixo-declinado-com-halteres",
+                        "nome_url"=>"Crucifixo-declinado-com-halteres",
                         "desc" => "Crucifixo declinado com halteres",
                         "img" => "Decline-Dumbbell-Fly.webp",
                         "musculo_trabalhado" => "Peitoral, deltoide anterior, biceps",
@@ -551,7 +551,7 @@
                     ),
                     Array(
                         "nome" => "Pullover com halter",
-                        "nome_url"=>"pullover-com-halter",
+                        "nome_url"=>"Pullover-com-halter",
                         "desc" => "Pullover com halter",
                         "img" => "Dumbbell-Pullover.webp",
                         "musculo_trabalhado" => "Peitoral, deltoide posterior, tríceps",
@@ -656,7 +656,7 @@
                     ),
                     Array(
                         "nome" => "Flexão",
-                        "nome_url"=>"flexao",
+                        "nome_url"=>"Flexao",
                         "desc" => "flexao",
                         "img" => "flexao-de-bracos.webp",
                         "musculo_trabalhado" => "Peitoral, deltoide anterior, tríceps",
@@ -673,7 +673,7 @@
                     ),
                     Array(
                         "nome" => "Supino declinado",
-                        "nome_url"=>"Supino declinado",
+                        "nome_url"=>"Supino-declinado",
                         "desc" => "Supino declinado",
                         "img" => "Decline-Barbell-Bench-Press.webp",
                         "musculo_trabalhado" => "Peitoral, deltoide anterior, tríceps",
@@ -767,7 +767,7 @@
                     ),
                     Array(
                         "nome" => "Rosca direta com barra W pegada fechada",
-                        "nome_url"=>"rosca-direta-com-barra-W-pegada-fechada",
+                        "nome_url"=>"Rosca-direta-com-barra-w-pegada-fechada",
                         "desc" => "Rosca direta com barra W pegada fechada",
                         "img" => "Close-Grip-Z-Bar-Curl.webp",
                         "musculo_trabalhado" => "Biceps, braquial",
@@ -785,7 +785,7 @@
                     ),
                     Array(
                         "nome" => "Rosca scott com barra W",
-                        "nome_url"=>"Rosca-scott-com-barra-W",
+                        "nome_url"=>"Rosca-scott-com-barra-w",
                         "desc" => "Rosca scott com barra W",
                         "img" => "Z-Bar-Preacher-Curl.webp",
                         "musculo_trabalhado" => "Biceps, braquial",
@@ -873,7 +873,7 @@
                     ),
                     Array(
                         "nome" => "Rosca direta com barra W",
-                        "nome_url"=>"Rosca-direta-com-barra-W",
+                        "nome_url"=>"Rosca-direta-com-barra-w",
                         "desc" => "Rosca direta com barra W",
                         "img" => "Z-Bar-Curl.webp",
                         "musculo_trabalhado" => "Biceps, braquial",
@@ -1013,7 +1013,7 @@
                     ),
                     Array(
                         "nome" => "Rosca martelo unilateral scott",
-                        "nome_url"=>"rosca-martelo-unilateral-scott",
+                        "nome_url"=>"Rosca-martelo-unilateral-scott",
                         "desc" => "Rosca inversa com halteres",
                         "img" => "Dumbbell-Scott-Hammer-Curl.webp",
                         "musculo_trabalhado" => "Biceps, braquial",
@@ -1030,7 +1030,7 @@
                     ),
                     Array(
                         "nome" => "Rosca inversa com barra W",
-                        "nome_url"=>"rosca-inversa-com-barra-w",
+                        "nome_url"=>"Rosca-inversa-com-barra-w",
                         "desc" => "Rosca inversa com halteres",
                         "img" => "Reverse-Grip-EZ-Bar-Curl.webp",
                         "musculo_trabalhado" => "Biceps, braquial",
@@ -1152,8 +1152,8 @@
                     ),
                     Array(
                         "nome" => "rosca de punho inversa apoiado no banco",
-                        "nome_url"=>"Rosca-de-punho-inversa-com-barra",
-                        "desc" => "Rosca de punho inversa com barra",
+                        "nome_url"=>"Rosca-de-punho-inversa-com-barra-no-banco",
+                        "desc" => "Rosca de punho inversa com barra no banco",
                         "img" => "Barbell-Reverse-Wrist-Curl-Over-a-Bench.webp",
                         "musculo_trabalhado" => "Braquiorradial, braquial",
 
@@ -1575,7 +1575,7 @@
                     ),
                     Array(
                         "nome" => "Elevação de pernas",
-                        "nome_url"=>"Elevação-de-pernas",
+                        "nome_url"=>"Elevacao-de-pernas",
                         "desc" => "Elevação de pernas",
                         "img" => "Lying-Leg-Raise.webp",
                         "musculo_trabalhado" => "Reto abdominal, coxas",
@@ -1610,9 +1610,9 @@
                         )
                     ),
                     Array(
-                        "nome" => "Elevação de pernas",
-                        "nome_url"=>"Elevação-de-pernas",
-                        "desc" => "Elevação de pernas",
+                        "nome" => "Elevação de pernas na cadeira",
+                        "nome_url"=>"Elevacao-de-pernas-na-cadeira",
+                        "desc" => "Elevação de pernas na cadeira",
                         "img" => "Captains-Chair-Leg-Raise.webp",
                         "musculo_trabalhado" => "Reto abdominal, oblíquos, coxas",
 
@@ -2102,7 +2102,7 @@
                     ),
                     Array(
                         "nome" => "Elevação de panturrilha unilateral",
-                        "nome_url"=>"elevação-de-panturrilha-unilateral",
+                        "nome_url"=>"Elevacao-de-panturrilha-unilateral",
                         "desc" => "Elevação de panturrilha unilateral apoiado",
                         "img" => "Single-Leg-Calf-Raises.webp",
                         "musculo_trabalhado" => "panturrilhas",
@@ -2187,7 +2187,7 @@
                     ),
                     Array(
                         "nome" => "Remada sentado na polia com barra",
-                        "nome_url"=>"Remada-sentada-na-maquina-com barra",
+                        "nome_url"=>"Remada-sentada-na-polia-com-barra",
                         "desc" => "Remada sentado na polia com barra",
                         "img" => "Seated-Cable-Row.webp",
                         "musculo_trabalhado" => "Dorsal, trapézio, rombóides",
@@ -2209,7 +2209,7 @@
                     ),
                     Array(
                         "nome" => "Remada sentado na polia com pegador",
-                        "nome_url"=>"Remada-sentada-na-maquina-com-pegador",
+                        "nome_url"=>"Remada-sentada-na-polia-com-pegador",
                         "desc" => "Remada sentado na polia com barra  com pegador",
                         "img" => "Seated-Cable-Rope-Row.webp",
                         "musculo_trabalhado" => "Dorsal, trapézio, rombóides",
@@ -2276,8 +2276,8 @@
                     ),
                     Array(
                         "nome" => "Remada curvada com halteres",
-                        "nome_url"=>"Remada-ponta-de-barra",
-                        "desc" => "Remada ponta de barra",
+                        "nome_url"=>"Remada-curvada-com-halteres",
+                        "desc" => "Remada curvada com halteres",
                         "img" => "Bent-Over-Dumbbell-Row.webp",
                         "musculo_trabalhado" => "Dorsal, trapézio, rombóides",
 
@@ -2339,7 +2339,7 @@
                     ),
                     Array(
                         "nome" => "Remada na barra T",
-                        "nome_url"=>"remada-na-barra-T",
+                        "nome_url"=>"Remada-na-barra-T",
                         "desc" => "Remada na barra T com pegada invertida",
                         "img" => "../Trapezio-medio/Lever-T-bar-Row.webp",
                         "musculo_trabalhado" => "Dorsal, trapézio, rombóides",
@@ -2359,7 +2359,7 @@
                     ),
                     Array(
                         "nome" => "Remada sentado na polia com barra",
-                        "nome_url"=>"remada-sentado-na-polia-com-barra",
+                        "nome_url"=>"Remada-sentado-na-polia-com-barra",
                         "desc" => "Remada sentado na polia com barra",
                         "img" => "../Trapezio-medio/Seated-Cable-Row.webp",
                         "musculo_trabalhado" => "Dorsal, trapézio, rombóides",
@@ -2448,7 +2448,7 @@
                     ),
                     Array(
                         "nome" => "Remada curvada com halteres",
-                        "nome_url"=>"remada-curvada-com-halteres",
+                        "nome_url"=>"Remada-curvada-com-halteres",
                         "desc" => "Remada ponta de barra",
                         "img" => "../Trapezio-medio/Bent-Over-Dumbbell-Row.webp",
                         "musculo_trabalhado" => "Dorsal, trapézio, rombóides",
@@ -2468,7 +2468,7 @@
                     ),
                     Array(
                         "nome" => "Remada com halter unilateral",
-                        "nome_url"=>"remada-com-halter-unilateral",
+                        "nome_url"=>"Remada-com-halter-unilateral",
                         "desc" => "Remada com halter unilateral no banco",
                         "img" => "../../front/Ombros/Dumbbell-Row.webp",
                         "musculo_trabalhado" => "Dorsal, deltoide posterior, trapézio",
@@ -2486,7 +2486,7 @@
                     ),
                     Array(
                         "nome" => "Remada inclinada de 45 Graus",
-                        "nome_url"=>"Remada-inclinada-45-Graus",
+                        "nome_url"=>"Remada-inclinada-45-graus",
                         "desc" => "Remada inclinada de 45 Graus com halteres",
                         "img" => "../../front/Ombros/45-Degree-Incline-Row.webp",
                         "musculo_trabalhado" => "Deltoide posterior, dorsal",
@@ -2544,7 +2544,7 @@
                     ),
                     Array(
                         "nome" => "Puxada alta frontal com triângulo",
-                        "nome_url"=>"Puxada-alta-frontal-com-triângulo",
+                        "nome_url"=>"Puxada-alta-frontal-com-triangulo",
                         "desc" => "Puxada alta frontal com triângulo",
                         "img" => "V-bar-Lat-Pulldown.webp",
                         "musculo_trabalhado" => "Dorsal, ombros",
@@ -2590,7 +2590,7 @@
                 "Triceps" => Array(
                     Array(
                         "nome" => "Barra paralela",
-                        "nome_url"=>"barra-paralela",
+                        "nome_url"=>"Barra-paralela",
                         "desc" => "Barra paralela",
                         "img" => "../../front/Peitoral/Chest-Dips.webp",
                         "musculo_trabalhado" => "Peitoral, deltoroides, triceps",
@@ -2841,7 +2841,7 @@
                     ),
                     Array(
                         "nome" => "Extensão de tríceps com halter sentado",
-                        "nome_url"=>"Extensão-de-triceps-com-halter-sentado",
+                        "nome_url"=>"Extensao-de-triceps-com-halter-sentado",
                         "desc" => "Extensão de tríceps com halter sentado",
                         "img" => "Seated-Dumbbell-Triceps-Extension.webp",
                         "musculo_trabalhado" => "Tríceps, antebraços",
@@ -2863,7 +2863,7 @@
                     ),
                     Array(
                         "nome" => "Extensão lateral de tríceps no cabo",
-                        "nome_url"=>"Extensão-lateral-de-triceps-no-cabo",
+                        "nome_url"=>"Extensao-lateral-de-triceps-no-cabo",
                         "desc" => "Extensão lateral de tríceps no cabo",
                         "img" => "Cable-Rear-Drive.webp",
                         "musculo_trabalhado" => "Tríceps, antebraços, ombro",
@@ -2885,7 +2885,7 @@
                     ),
                     Array(
                         "nome" => "Extensão de tríceps sob a cabeça unilateral deitado",
-                        "nome_url"=>"Extensão-de-tríceps-sob-a-cabeça-unilateral-deitado",
+                        "nome_url"=>"Extensao-de-triceps-sob-a-cabeca-unilateral-deitado",
                         "desc" => "Extensão de tríceps sob a cabeça unilateral deitado",
                         "img" => "One-Arm-Lying-Triceps-Extension.webp",
                         "musculo_trabalhado" => "Tríceps, antebraços, ombro",
@@ -3361,7 +3361,7 @@
                     ),
                     Array(
                         "nome" => "Balanço",
-                        "nome_url"=>"Balanço",
+                        "nome_url"=>"balanco",
                         "desc" => "Balanço",
                         "img" => "russian-kettlebell-swing.webp",
                         "musculo_trabalhado" => "Glúteos, coxas anteriores, coxas posteriores",
@@ -3672,7 +3672,7 @@
                     ),
                     Array(
                         "nome" => "Balanço",
-                        "nome_url"=>"Balanço",
+                        "nome_url"=>"Balanco",
                         "desc" => "Balanço",
                         "img" => "../Gluteos/russian-kettlebell-swing.webp",
                         "musculo_trabalhado" => "Coxas posteriores, glúteos, coxas anteriores",

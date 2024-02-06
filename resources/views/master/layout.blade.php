@@ -79,13 +79,8 @@
         aria-labelledby="offcanvasBottomLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasBottomLabel">Aceitar termos</h5>
-            {{-- <div class="btns" style="display: flex;justify-content: flex-end;margin-top:2rem;justify-content: center;"> --}}
-            {{-- <div class="btns" style="display:flex;justify-content: center;"> --}}
-                {{-- <button style="margin-right: 5px" type="button" class="btn btn-light" data-bs-dismiss="offcanvas"
-                    aria-label="Close">Fechar</button> --}}
                 <button type="button" class="btn btn-warning" data-bs-dismiss="offcanvas" aria-label="success"
                     onclick="createCookie()">Aceitar</button>
-            {{-- </div> --}}
         </div>
         <div class="offcanvas-body small" style="display:flex; flex-direction:column">
             <div class="content-offcanvas">

@@ -41,7 +41,7 @@
                         <li class="li-title">Contato</li>
                         <dl>
                             {{-- <li><a href="#">Insta</a></li> --}}
-                            <li><a href="#">Email</a></li>
+                            <li>Areafit.777@gmail.com</li>
                             <li><a href="{{ route('policy') }}">Políticas</a></li>
                         </dl>
                     </dl>

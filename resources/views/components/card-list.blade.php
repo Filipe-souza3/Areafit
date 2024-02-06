@@ -102,6 +102,9 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Modal Cookie -->
+            <x-accept-cookie></x-accept-cookie>
         @endforeach
     @endif
 </div>
