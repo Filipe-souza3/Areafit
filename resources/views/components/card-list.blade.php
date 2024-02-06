@@ -104,7 +104,7 @@
             </div>
 
             <!-- Modal Cookie -->
-            <x-accept-cookie></x-accept-cookie>
+            <x-modals.accept-cookie></x-modals.accept-cookie>
         @endforeach
     @endif
 </div>
