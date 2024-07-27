@@ -10,14 +10,14 @@ class BasicTrainning
         "Segunda" => array(
 
            "Peitoral" => array(
-                "supino-reto",
+                "Supino-reto",
                 "Supino-inclinado-com-halteres",
-                "Crosso-Over"
+                "Cross-over"
             ),
 
             "Ombros" => array(
-                "desenv-halteres",
-                "Elevação-lateral-com-halteres"
+                "Desenv-halteres",
+                "Elevacao-lateral-com-halteres"
             ),
 
             "Triceps" => array(
@@ -34,7 +34,7 @@ class BasicTrainning
                 "Puxada-alta-frontal",
                 "Remada-sentado-na-maquina-com-triangulo",
                 "Puxada-alta-frontal-com-corda",
-                "remada-na-barra-T"
+                "Remada-na-barra-T"
             ),
 
             "Trapezio" => array(
@@ -43,7 +43,7 @@ class BasicTrainning
 
             "Biceps" => array(
                 "Rosca-direta-com-halteres",
-                "rosca-inversa-com-barra-w"
+                "Rosca-inversa-com-barra-w"
             ),
             "Abdomen"=> array(
                 "Prancha"
@@ -86,7 +86,7 @@ class BasicTrainning
         ),
         "Quarta" => array(
             "Peitoral"=> array(
-                "Peck-deck-Voador",
+                "Peck-deck-voador",
                 "Crucifixo-inclinado"
             ),
 
@@ -96,8 +96,8 @@ class BasicTrainning
             ),
 
             "Ombros"=> array(
-                "desenv-halteres",
-                "Elevação-lateral-com-halteres"
+                "Desenv-halteres",
+                "Elevacao-lateral-com-halteres"
             ),
 
             "Biceps"=> array(
